@@ -3,7 +3,6 @@ import Basics from './basics';
 
 const GlobalStyle = createGlobalStyle`
 body {
-  height: 800px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
