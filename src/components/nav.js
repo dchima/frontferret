@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Basics, Screen } from 'styles';
 import { links } from 'content';
+import logo from 'images/capcards.png';
 
 const NavContainer = styled.div`
   position: fixed;
@@ -13,7 +14,7 @@ const NavContainer = styled.div`
   top: 0;
   left: 0;
   margin: 0 auto;
-  background-color: ${Basics.colors.creamWhite};
+  background-color: #F8F8F4;
   width: 100%;
   transition: ${Basics.transition};
   ${Screen.largePhone`
@@ -37,6 +38,10 @@ const Svg = styled.header`
   padding-top: 40px;
   font-weight: 550;
   padding-left: 200px;
+  img {
+    height: 50px;
+    width: 50px;
+  }
   ${Screen.largePhone`
     padding-left: 10px;
   `};
@@ -102,6 +107,7 @@ export default class Nav extends React.Component {
         <NavContainer className={this.state.show ? 'active' : 'hidden'}>
         <Svg>
           <Link to={'/'}>
+            <img src={logo} alt='logo' />
             capcards
           </Link>
         </Svg>
