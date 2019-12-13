@@ -1,2 +1,0 @@
-# frontferret
-captions app frontend
