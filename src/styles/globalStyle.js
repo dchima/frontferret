@@ -4,7 +4,7 @@ import Basics from './basics';
 const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,7 +18,7 @@ code {
 }
 
 a {
-  color: ${Basics.colors.solidBlue};
+  color: ${Basics.colors.laserBlue};
   text-decoration: none;
   text-decoration-skip-ink: auto;
   position: relative;

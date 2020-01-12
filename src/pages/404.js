@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { GlobalStyle } from 'styles';
+import { GlobalStyle, Basics } from 'styles';
 import { Nav } from 'components';
 
 const PageContainer = styled.div`
@@ -19,7 +19,7 @@ const BodyText = styled.p`
   font-weight: 800;
   font-size: 100px;
   line-height: 80px;
-  color: #2844A0;
+  color: ${Basics.colors.laserBlue};
 `;
 function App() {
   return (

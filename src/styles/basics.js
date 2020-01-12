@@ -8,6 +8,7 @@ const basics = {
     fadedRed: '#AA6969',
     solidBlue: '#2844A0',
     neonBlue: '#002FAD',
+    laserBlue: '#1709B5',
     fadedBlue: '#9EADD5',
     chalkBlue: '#727884',
     washBlue: '#EDFCFF',
