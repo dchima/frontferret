@@ -5,7 +5,7 @@ export const getAllCaptions = () => async dispatch => {
   .then((res) => res.json())
   .then((response) =>
     dispatch({
-      type: GET_CAPTIONS,
+      type: GET_ALL_CAPTIONS,
       payload: response.data.captions
     })
   );

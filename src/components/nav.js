@@ -10,11 +10,11 @@ const NavContainer = styled.div`
   height: 8vh;
   display: flex;
   flex-direction: row;
-  align-items: cener;
+  align-items: center;
   top: 0;
   left: 0;
   margin: 0 auto;
-  background-color: #F8F8F4;
+  background-color: ${Basics.colors.cheeseCake};
   width: 100%;
   transition: ${Basics.transition};
   ${Screen.largePhone`
@@ -34,10 +34,6 @@ const Transition = styled.div`
   }
 `;
 const Svg = styled.header`
-  position: absolute;
-  padding-top: 40px;
-  font-weight: 550;
-  padding-left: 200px;
   img {
     height: 50px;
     width: 50px;
@@ -51,14 +47,27 @@ const ListContainer = styled.div`
   position: absolute;
   display: flex;
   flex-direction: row;
-  padding-top: 45px;
+  margin-top: 40px;
   right: 140px;
   font-weight: 550;
   ${Screen.largePhone`
-  padding-top: 40px;
+  margin-top: 15px;
   right: 10px;
   `};
-  
+`;
+
+const LogoContainer = styled.div`
+  font-size: ${Basics.fontSize.small};
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+  margin-left: 200px;
+  font-weight: 550;
+  ${Screen.largePhone`
+    margin-top: 10px;
+    margin-left: 10px;
+  `};
 `;
 const NavList = styled.div`
   height: 23px;
@@ -69,6 +78,9 @@ const NavList = styled.div`
   ${Screen.smallPhone`
     padding-right: 15px;
   `};
+`;
+const Label = styled.div`
+  margin-top: 20px;
 `;
 export default class Nav extends React.Component {
   constructor() {
@@ -99,21 +111,27 @@ export default class Nav extends React.Component {
   render() {
     const navs = links.navLinks.map(
       (item, i) => <NavList key={i}>
-  <Link to={item.url}>{item.name}</Link>
+        <Link to={item.url}>{item.name}</Link>
       </NavList>,
     );
     return (
       <Transition>
         <NavContainer className={this.state.show ? 'active' : 'hidden'}>
-        <Svg>
-          <Link to={'/'}>
-            <img src={logo} alt='logo' />
-            capcards
-          </Link>
-        </Svg>
-        <ListContainer>
-          {navs}
-        </ListContainer>
+          <LogoContainer>
+            <Svg>
+              <Link to={'/'}>
+                <img src={logo} alt='logo' />
+              </Link>
+            </Svg>
+            <Label>
+              <Link to={'/'}>
+                capcards
+              </Link>
+            </Label>
+          </LogoContainer>
+          <ListContainer>
+            {navs}
+          </ListContainer>
         </NavContainer>
       </Transition>
     );

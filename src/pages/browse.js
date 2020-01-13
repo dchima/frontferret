@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { GlobalStyle, Screen } from 'styles';
-import { Nav, CaptionCard } from 'components';
+import { Nav, Captions } from 'components';
 
-const CaptionsContainer = styled.div`
+const BrowseContainer = styled.div`
   position: relative;
   display: flex;
   margin: 200px 280px 0px 280px;
@@ -16,51 +16,16 @@ const CaptionsContainer = styled.div`
 `};
 `;
 
-const Batch = styled.div`
-  position: relative;
-  margin-bottom: 20px;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  ${Screen.largePhone`
-    margin-top: 0px;
-    align-items: center;
-    margin-bottom: 10px;
-`};
-`;
+const App = () => (
+  <BrowseContainer>
+  <Helmet>
+    <meta charSet="utf-8" />
+    <title>Browse Captions</title>
+  </Helmet>
+  <GlobalStyle />
+  <Captions />
+  <Nav />
+</BrowseContainer>
+);
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      captions: [],
-    };
-  }
-
-  componentDidMount() {
-    fetch('https://capcards-api.herokuapp.com/v1.0/api/caption/')
-      .then((res) => res.json())
-      .then((response) => {
-        this.setState({ captions: response.data.captions });
-      })
-      .catch(console.log);
-  }
-
-  render() {
-    const captions = this.state.captions.map((caption) => <CaptionCard key={caption.id} content={caption} />);
-    return (
-      <CaptionsContainer>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Browse Captions</title>
-        </Helmet>
-        <GlobalStyle />
-        <Batch>
-          {captions}
-        </Batch>
-        <Nav />
-      </CaptionsContainer>
-    );
-  }
-}
 export default App;

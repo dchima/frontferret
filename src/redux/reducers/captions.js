@@ -1,7 +1,7 @@
 import { GET_ALL_CAPTIONS } from '../actionTypes/captionTypes';
 
 const initialState = {
-  captions: []
+  items: []
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -9,7 +9,7 @@ export default (state = initialState, { type, payload }) => {
     case GET_ALL_CAPTIONS: 
       return {
         ...state,
-        captions: payload
+        items: payload
       };
     default:
       return state;
