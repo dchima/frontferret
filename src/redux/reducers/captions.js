@@ -9,7 +9,7 @@ export default (state = initialState, { type, payload }) => {
     case GET_ALL_CAPTIONS: 
       return {
         ...state,
-        items: payload
+        items: payload.data.captions
       };
     default:
       return state;

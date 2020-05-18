@@ -1,12 +1,12 @@
+import axios from 'utils/axios';
 import { GET_ALL_CAPTIONS } from '../actionTypes/captionTypes';
 
 export const getAllCaptions = () => async dispatch => {
-  fetch('https://capcards-api.herokuapp.com/v1.0/api/caption/')
-  .then((res) => res.json())
-  .then((response) =>
+  await axios.get('v1.0/api/caption/')
+  .then((res) => 
     dispatch({
       type: GET_ALL_CAPTIONS,
-      payload: response.data.captions
+      payload: res.data
     })
   );
 };

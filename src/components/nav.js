@@ -48,7 +48,7 @@ const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 40px;
-  right: 140px;
+  right: 270px;
   font-weight: 550;
   ${Screen.largePhone`
   margin-top: 15px;
@@ -62,7 +62,7 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 45px;
-  margin-left: 200px;
+  margin-left: 270px;
   font-weight: 550;
   ${Screen.largePhone`
     margin-top: 10px;

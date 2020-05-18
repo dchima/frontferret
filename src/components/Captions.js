@@ -19,7 +19,8 @@ const CaptionsContainer = styled.div`
 
 const Batch = styled.div`
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   align-items: center;
   display: flex;
   flex-wrap: wrap;

@@ -39,6 +39,13 @@ a {
 
   }
 }
+
+.suggestion-active {
+  background-color: ${Basics.colors.cheeseCake};
+  color: ${Basics.colors.laserBlue};
+  cursor: pointer;
+  font-weight: 700;
+}
 `;
 
 export default GlobalStyle;

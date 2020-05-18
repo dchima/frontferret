@@ -12,11 +12,12 @@ const Card = styled.div`
   margin-right: 30px;
   margin-bottom: 40px;
   height: 250px;
-  width: 250px;
+  width: 230px;
   background-color: ${Basics.colors.white};
   ${Screen.largePhone`
     margin: 20px;
     width: 100%;
+    height: 210px;
   `};
   ${Screen.smallPhone`
   margin: 10px 3px;
@@ -35,11 +36,11 @@ const ContentContainer = styled.div`
   `};
 `;
 
-const Text = styled.h1`
+const Text = styled.p`
   color: ${Basics.colors.laserBlue};
   font-weight: 800;
-  font-size: 17px;
-  padding-top: 70px;
+  font-size: 15px;
+  padding-top: 50px;
   
   ${Screen.tablet`
     padding-top: 0px;
